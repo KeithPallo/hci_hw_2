@@ -6,23 +6,37 @@
       rel="stylesheet">
 </header>
 <body>
-   <div id="screen">
-     <div class="head-bar">
-      <div class="back-button"><i class="material-icons">arrow_back</i></div>
-   </div>
-   <img src="images/currents.jpg" alt="Currents Album Cover"/>
+  <div id="screen">
+    <div class="head-bar">
+      <a href="albums.html">
+         <!-- Original version removed for consistency to previous page  -->
+        <img class="back-button" src="images/back_arrow.png">
+      </a>
+    </div>
+   <img class="player-album-art" src="images/currents.jpg">
    <div>
-      <p>The Less I Know The Better</p>
-      <p><em>Currents</em> - Tame Impala</p>
+        <div class="player-song-info">The Less I Know The Better</div>
+        <div id="player-song-name"><p><em>Currents</em> - Tame Impala</p></div>
    </div>
-   <input type="range">
-   <div>0:00</div>
-   <div>3:00</div>
-   <div>
+
+
+     <input class="slider" type="range" value="0" min="0" max="180">
+     <div class="playbar">
+       <span class="end_label">0:00</span>
+       <span class="end_label">3:00</span>
+     </div>
+   <div class="player-controls">
+
+     <div><i class="material-icons">skip_previous</i></div>
+     <div><i class="material-icons">play_arrow</i></div>
+     <div><i class="material-icons">skip_next</i></div>
+     <!--
       <button onclick="prevSong()"></button>
-      <button onclick="switchPlay()""></button>
+      <button onclick="switchPlay()"></button>
       <button onclick="nextSong()"></button>
+      -->
    </div>
+
    <div>
       <div id="vl0"></div>
       <div id="vl1"></div>
@@ -31,13 +45,12 @@
       <div id="vl4"></div>
       <div id="vl5"></div>
    </div>
-   <button onclick="volDown()">&mdash;</button>
-   <button onclick="volUp()">+</button>
-   
-</div>
+   <button class="vol_button" onclick="volDown()">&mdash;</button>
+   <button class="vol_button" onclick="volUp()">+</button>
+    </div>
 <script src="ipod.js"></script>
 </body>
 </html>
-<!-- 
+<!--
 * bg iphone img is 363x762px
 * iphone 'screen' is apprx 300x530 -->

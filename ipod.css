@@ -1,5 +1,5 @@
-/* 
-	Global classes 
+ /*
+	Global classes
 					*/
 body {
 	background-image: url("images/iphoneOL.jpg");
@@ -12,106 +12,248 @@ body {
 	height: 530px;
 	width: 300px;
 	margin: 105px 23px;
+	text-align: center;
 }
 
 .head-bar {
-	
+	text-align: center;
+	color: white;
+	height: 9%;
+	text-shadow: 2px 2px black;
+	background-color: #e6ccff;
 }
 
 .back-button {
-	
+	float:left;
+	height: 80%;
+	width: 20%;
+	margin-top: 3px;
+	margin-left: 3px;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
 }
 
-/* 
-	Albums 
+a:link {
+  text-decoration: none;
+	color: black;
+}
+
+a:visited {
+  text-decoration: none;
+	color: black;
+}
+
+a:hover {
+  text-decoration: none;
+	color: black;
+}
+
+a:active {
+  text-decoration: none;
+	color: black;
+}
+
+/*
+	Albums
 			*/
 .albums-album-wrapper {
-	f
+	display: grid;
+	grid-template-columns: 50% 50%;
+	height: 440px;
+	width: 290px;
+	margin-left: 5px;
+
 }
 
 .albums-album-art {
-	
+	height: 130px;
+	width: 130px;
+	margin: 15% 0% 5% 5%;
 }
 
 .albums-album-name {
-
+	text-align: center;
+	font-weight: bold;
 }
 
 .albums-artist-name {
-
+	text-align: center;
+	font-style: italic;
+	font-size: 10pt;
 }
 
-/* 
-	Songs 
+
+/*
+	Songs
 			*/
 .songs-info-wrapper {
-	
+	float: right;
+	width: 90%;
+	height: 90%;
+	padding: 5%;
 }
 
 .songs-album-art {
-	
+	float: left;
+	width: 90%;
+	height: 90%;
+	padding: 5%;
 }
 
 .songs-album-name {
-	
-
+	font-weight: bold;
+	font-size: 24px;
+	padding: 5%;
 }
 
 .songs-artist-name {
-	
+	font-style: italic;
+	font-size: 18px;
+	padding: 5%;
 }
 
 .songs-text-info {
-	
+	border-style: solid;
+	font-weight: 500;
+  border-color: grey;
+	border-width: 1px;
+	margin: 2%;
+	padding-left: 2%
 }
 
 .songs-album-year {
-	
+	padding: 5%;
+	font-size: 18px;
 }
 
 .songs-list {
-	
+	margin-left: -5%
 }
 
-/* 
-	Player 
+/*
+description-wrapper is a wrapper
+for the songs-info-wrapper and the
+songs-album-art to position them next
+to each other.
+			*/
+.description-wrapper {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	height: 30%;
+	width: 290px;
+	margin-left: 5px;
+}
+
+/*
+	Player
 			*/
 .player-album-art {
-	
+	display: block;
+	margin: 8% auto;
+	margin-bottom: 5%;
+	width: 240px;
+	height: 240px;
 }
 
 .player-song-info {
-	
+	text-align: center;
+	font-size: 14pt;
+	padding:0;
+  margin:0;
 }
 
 #player-song-name {
-	
+	text-align: center;
+	padding:0;
+	margin:0;
+	font-size: 14pt;
+	color: #e6ccff;
 }
 
 .volume-bar {
-	
 }
 
 .volume-level {
-	
+
 }
 
 .volume-rocker {
-	
+
 }
 
+
+
 .player-controls{
-	
+	display: inline-grid;
+	width: 40%;
+	grid-template-columns: 33% 33% 33%;
 }
 
 #player-time {
-	
+
 }
 
 #time-elapsed {
-	
+
 }
 
 #time-total{
-	
+
+}
+
+
+.playbar{
+	display: inline-grid;
+	width: 75%;
+	grid-template-columns: 50% 50%;
+
+}
+
+.playbar .end_label:first-of-type {
+  text-align: left;
+}
+
+.playbar .end_label {
+  text-align: right;
+}
+
+
+.slider{
+	margin: 0 auto;
+	width: 75%;
+	height: 10px;
+	-webkit-appearance: none;
+	border-radius: 5px;
+	background: #cccccc;
+	border-color: #8c8c8c;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background:#bfbfbf;
+  cursor: pointer;
+}
+
+
+
+.material-icons{
+	background-color: grey;
+}
+
+.vol_button{
+	float: left;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 18px;
+	width: 30%;
+	margin-top: 20px;
 }
