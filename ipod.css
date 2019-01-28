@@ -172,6 +172,12 @@ to each other.
 }
 
 .volume-bar {
+	display:inline-block;
+	width: 20px;
+	height: 8px;
+	outline-style: solid;
+	outline-color: grey;
+	margin-left: 5px;
 }
 
 .volume-level {

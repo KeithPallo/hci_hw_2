@@ -4,6 +4,9 @@ var volLevels = [];
 
 function init() {
 	// Your code goes here
+  for (i = 10; i < 17; i++) {
+    volLevels.push(document.getElementById("v"+i));
+  }
 };
 
 function volUp() {
