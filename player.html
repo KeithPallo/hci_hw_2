@@ -15,21 +15,27 @@
     </div>
    <img class="player-album-art" src="images/currents.jpg">
    <div>
-        <div class="player-song-info">The Less I Know The Better</div>
+        <div class="player-song-info" id="songName">The Less I Know The Better</div>
         <div id="player-song-name"><p><em>Currents</em> - Tame Impala</p></div>
    </div>
 
 
-     <input class="slider" type="range" value="0" min="0" max="180">
+     <input class="slider" type="range" value="0" min="0" max="10" id="slider">
      <div class="playbar">
-       <span class="end_label">0:00</span>
+       <span class="end_label" id = "elapsedTime">0:00</span>
        <span class="end_label">3:00</span>
      </div>
    <div class="player-controls">
 
-     <div><i class="material-icons">skip_previous</i></div>
-     <div><i class="material-icons">play_arrow</i></div>
-     <div><i class="material-icons">skip_next</i></div>
+
+     <button class="mdc-icon-button material-icons" id="prev">skip_previous</button>
+     <button class="mdc-icon-button material-icons" id="play_stop">play_arrow</button>
+     <button class="mdc-icon-button material-icons" id="next">skip_next</button>
+<!--
+     <div><i class="material-icons" id="prev">skip_previous</i></div>
+       <div><i class="material-icons" id="play_stop" onclick="switchPlay()">play_arrow</i></div>
+     <div><i class="material-icons" id="next">skip_next</i></div>
+     -->
      <!--
       <button onclick="prevSong()"></button>
       <button onclick="switchPlay()"></button>
