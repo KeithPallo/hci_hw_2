@@ -7,7 +7,6 @@ body {
 	font-family: Avenir, sans-serif;
 }
 
-
 #screen {
 	height: 530px;
 	width: 300px;
@@ -156,8 +155,6 @@ to each other.
 	height: 240px;
 }
 
-
-
 .player-song-info {
 	text-align: center;
 	font-size: 14pt;
@@ -186,14 +183,10 @@ to each other.
 }
 
 .volume-level {
-
 }
 
 .volume-rocker {
-
 }
-
-
 
 .player-controls{
 	display: inline-grid;
@@ -204,17 +197,13 @@ to each other.
 }
 
 #player-time {
-
 }
 
 #time-elapsed {
-
 }
 
 #time-total{
-
 }
-
 
 .playbar{
 	display: inline-grid;
@@ -234,13 +223,11 @@ to each other.
 	font-size: 10pt;
 }
 
-
 .slider{
 	margin: 0 auto;
 	width: 75%;
 	height: 5px;
 }
-
 
 .material-icons{
 	display: inline-block;
@@ -250,14 +237,12 @@ to each other.
 
 #rocker{
 	background-color: white;
-
 }
 
 #volume_wrapper{
 	display: inline-grid;
 	width: 80%;
 	grid-template-columns: 10% 90%;
-
 }
 
 .vol_button{

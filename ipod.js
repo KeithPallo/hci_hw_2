@@ -5,6 +5,7 @@ var curVol = 3;
 var playing = false;
 var curSongIndex = tracklist.indexOf("The Less I Know The Better");
 
+
 function init() {
 
   for (i = 0; i < 6; i++) {
@@ -16,14 +17,15 @@ function init() {
   }
 };
 
-function volUp() {
 
+function volUp() {
 
   if ( curVol < 6){
   volLevels[curVol].style.backgroundColor = "#9f5cc4";
   curVol += 1;
   }
 }
+
 
 function volDown() {
   if ( curVol > 0){
@@ -32,27 +34,23 @@ function volDown() {
   }
 }
 
+
 document.getElementById('play_stop').onclick = function switchPlay() {
 
   var button = document.getElementById("play_stop");
 
 	if (playing == false){
-
     button.innerHTML = "pause";
     playing = true;
-
-
     timing = setInterval(moveTime, 1000);
   }
   else{
-
     button.innerHTML = "play_arrow";
     playing = false;
     clearInterval(timing);
   }
-
-
 }
+
 
 document.getElementById("next").onclick = function nextSong() {
 
@@ -65,6 +63,7 @@ document.getElementById("next").onclick = function nextSong() {
     document.getElementById("songName").innerHTML = tracklist[curSongIndex];
   }
 
+
   if (playing == true){
       newSong();
   }
@@ -72,11 +71,11 @@ document.getElementById("next").onclick = function nextSong() {
       document.getElementById("slider").value = 0;
       document.getElementById("elapsedTime").innerHTML = "0:00";
   }
-
-
 }
 
+
 document.getElementById("prev").onclick = function prevSong() {
+
   if (curSongIndex == 0){
     curSongIndex = tracklist.length - 1;
     document.getElementById("songName").innerHTML = tracklist[curSongIndex];
@@ -93,8 +92,8 @@ document.getElementById("prev").onclick = function prevSong() {
       document.getElementById("slider").value = 0;
       document.getElementById("elapsedTime").innerHTML = "0:00";
   }
-
 }
+
 
 function secondsToMs(d) {
     d = Number(d);
@@ -104,6 +103,7 @@ function secondsToMs(d) {
 
     return `0${min}`.slice(-1) + ":" + `00${sec}`.slice(-2);
 }
+
 
 function moveTime() {
   //alert("Hello");
@@ -116,8 +116,8 @@ function moveTime() {
   else{
     newSong();
   }
-
 }
+
 
 function newSong() {
 
@@ -126,7 +126,6 @@ function newSong() {
   document.getElementById("elapsedTime").innerHTML = "0:00";
   clearInterval(timing);
   timing = setInterval(moveTime, 1000);
-
 }
 
 init();
