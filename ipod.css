@@ -151,32 +151,37 @@ to each other.
 .player-album-art {
 	display: block;
 	margin: 8% auto;
-	margin-bottom: 5%;
+	margin-bottom: 4%;
 	width: 240px;
 	height: 240px;
 }
 
+
+
 .player-song-info {
 	text-align: center;
 	font-size: 14pt;
-	padding:0;
-  margin:0;
+	height: 5px;
+	padding:0px;
+  margin:0px;
 }
 
 #player-song-name {
+	height: 40px;
 	text-align: center;
-	padding:0;
-	margin:0;
+	padding:-10px;
+	margin:0px;
 	font-size: 14pt;
-	color: #e6ccff;
+	color: #9f5cc4;
 }
 
 .volume-bar {
 	display:inline-block;
-	width: 20px;
-	height: 8px;
-	outline-style: solid;
-	outline-color: grey;
+	width: 24px;
+	height: 6px;
+	border: 1px;
+	border-style: solid;
+	border-color: grey;
 	margin-left: 5px;
 }
 
@@ -192,8 +197,10 @@ to each other.
 
 .player-controls{
 	display: inline-grid;
-	width: 40%;
+	width: 60%;
 	grid-template-columns: 33% 33% 33%;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 #player-time {
@@ -213,46 +220,44 @@ to each other.
 	display: inline-grid;
 	width: 75%;
 	grid-template-columns: 50% 50%;
-
 }
 
 .playbar .end_label:first-of-type {
+	padding-top: 3px;
   text-align: left;
+	font-size: 10pt;
 }
 
 .playbar .end_label {
+	padding-top: 3px;
   text-align: right;
+	font-size: 10pt;
 }
 
 
 .slider{
 	margin: 0 auto;
 	width: 75%;
-	height: 10px;
-	-webkit-appearance: none;
-	border-radius: 5px;
-	background: #cccccc;
-	border-color: #8c8c8c;
-	outline: none;
-	opacity: 0.7;
-	-webkit-transition: .2s;
-	transition: opacity .2s;
+	height: 5px;
 }
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background:#bfbfbf;
-  cursor: pointer;
-}
-
 
 
 .material-icons{
-	background-color: grey;
+	display: inline-block;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+#rocker{
+	background-color: white;
+
+}
+
+#volume_wrapper{
+	display: inline-grid;
+	width: 80%;
+	grid-template-columns: 10% 90%;
+
 }
 
 .vol_button{
@@ -261,5 +266,5 @@ to each other.
 	margin-right: 10%;
 	height: 18px;
 	width: 30%;
-	margin-top: 20px;
+	margin-top: 5px;
 }

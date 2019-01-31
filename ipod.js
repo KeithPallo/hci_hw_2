@@ -77,7 +77,22 @@ document.getElementById("next").onclick = function nextSong() {
 }
 
 document.getElementById("prev").onclick = function prevSong() {
-  newSong();
+  if (curSongIndex == 0){
+    curSongIndex = tracklist.length - 1;
+    document.getElementById("songName").innerHTML = tracklist[curSongIndex];
+  }
+  else{
+    curSongIndex --;
+    document.getElementById("songName").innerHTML = tracklist[curSongIndex];
+  }
+
+  if (playing == true){
+      newSong();
+  }
+  else{
+      document.getElementById("slider").value = 0;
+      document.getElementById("elapsedTime").innerHTML = "0:00";
+  }
 
 }
 
