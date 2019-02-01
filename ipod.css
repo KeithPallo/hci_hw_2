@@ -53,6 +53,11 @@ a:active {
 	color: black;
 }
 
+#link-to-ipod{
+	text-decoration: underline;
+	color: purple;
+}
+
 /*
 	Albums
 			*/
@@ -127,7 +132,9 @@ a:active {
 }
 
 .songs-list {
-	margin-left: -5%
+	text-align: left;
+	padding-left: 5px;
+	margin-left: -5%;
 }
 
 /*
@@ -155,6 +162,7 @@ to each other.
 	height: 240px;
 }
 
+/* Represents the album title */
 .player-song-info {
 	text-align: center;
 	font-size: 14pt;
@@ -182,27 +190,13 @@ to each other.
 	margin-left: 5px;
 }
 
-.volume-level {
-}
-
-.volume-rocker {
-}
-
+/* Wrapper for buttons */
 .player-controls{
 	display: inline-grid;
 	width: 60%;
 	grid-template-columns: 33% 33% 33%;
 	padding-top: 10px;
 	padding-bottom: 10px;
-}
-
-#player-time {
-}
-
-#time-elapsed {
-}
-
-#time-total{
 }
 
 .playbar{
@@ -223,6 +217,7 @@ to each other.
 	font-size: 10pt;
 }
 
+/* Represents the song progress in time */
 .slider{
 	margin: 0 auto;
 	width: 75%;
@@ -235,6 +230,7 @@ to each other.
 	margin-right: 2px;
 }
 
+/* Symbol next to volume bars */
 #rocker{
 	background-color: white;
 }

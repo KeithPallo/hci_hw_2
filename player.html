@@ -18,17 +18,20 @@
         <div class="player-song-info" id="songName">The Less I Know The Better</div>
         <div id="player-song-name"><p><em>Currents</em> - Tame Impala</p></div>
    </div>
+     <!-- * Represents the song progress in time -->
      <input class="slider" type="range" value="0" min="0" max="10" id="slider">
      <div class="playbar">
        <span class="end_label" id = "elapsedTime">0:00</span>
        <span class="end_label">3:00</span>
      </div>
    <div class="player-controls">
+     <!-- * Represents control buttons -->
      <button class="mdc-icon-button material-icons" id="prev">skip_previous</button>
      <button class="mdc-icon-button material-icons" id="play_stop">play_arrow</button>
      <button class="mdc-icon-button material-icons" id="next">skip_next</button>
    </div>
    <div id="volume_wrapper">
+     <!-- * Volume indicator section -->
       <div><i class="material-icons" id="rocker">volume_down</i></div>
       <div>
         <div class="volume-bar" id="vl0"></div>
@@ -40,12 +43,14 @@
       </div>
    </div>
    <div>
-   <button class="vol_button" onclick="volDown()">&mdash;</button>
-   <button class="vol_button" onclick="volUp()">+</button>
+    <!-- * Volume buttons -->
+     <button class="vol_button" onclick="volDown()">&mdash;</button>
+     <button class="vol_button" onclick="volUp()">+</button>
    </div>
 <script src="ipod.js"></script>
 </body>
 </html>
+
 <!--
 * bg iphone img is 363x762px
 * iphone 'screen' is apprx 300x530 -->

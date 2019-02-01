@@ -7,6 +7,7 @@ var curSongIndex = tracklist.indexOf("The Less I Know The Better");
 
 
 function init() {
+  // Default constructor
 
   for (i = 0; i < 6; i++) {
     volLevels.push(document.getElementById("vl" + i));
@@ -19,6 +20,7 @@ function init() {
 
 
 function volUp() {
+  // Increases volume level if possible
 
   if ( curVol < 6){
   volLevels[curVol].style.backgroundColor = "#9f5cc4";
@@ -28,6 +30,8 @@ function volUp() {
 
 
 function volDown() {
+  // Decreases volume level  if possible
+
   if ( curVol > 0){
   volLevels[curVol-1].style.backgroundColor = "white";
   curVol -= 1;
@@ -36,6 +40,7 @@ function volDown() {
 
 
 document.getElementById('play_stop').onclick = function switchPlay() {
+  // Starts and stops the player
 
   var button = document.getElementById("play_stop");
 
@@ -53,6 +58,7 @@ document.getElementById('play_stop').onclick = function switchPlay() {
 
 
 document.getElementById("next").onclick = function nextSong() {
+  // Goes to the next song
 
   if (curSongIndex+1 >= tracklist.length){
     curSongIndex = 0;
@@ -75,7 +81,8 @@ document.getElementById("next").onclick = function nextSong() {
 
 
 document.getElementById("prev").onclick = function prevSong() {
-
+  // Goes to the previous song
+  
   if (curSongIndex == 0){
     curSongIndex = tracklist.length - 1;
     document.getElementById("songName").innerHTML = tracklist[curSongIndex];
@@ -96,6 +103,9 @@ document.getElementById("prev").onclick = function prevSong() {
 
 
 function secondsToMs(d) {
+    // Converts an inteter string to minutes. For example, when the input
+    // has a value of 123, the player should display 2:03.
+
     d = Number(d);
 
     var min = Math.floor(d / 60);
@@ -106,7 +116,7 @@ function secondsToMs(d) {
 
 
 function moveTime() {
-  //alert("Hello");
+  // Increments the playing slide to show progress in a given song
   var slider = document.getElementById("slider");
 
   if (slider.value != slider.max){
@@ -120,6 +130,7 @@ function moveTime() {
 
 
 function newSong() {
+  // Starts a new song - used for all types of "next" song
 
   var slider = document.getElementById("slider");
   slider.value = 0;
