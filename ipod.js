@@ -44,11 +44,13 @@ document.getElementById('play_stop').onclick = function switchPlay() {
 
   var button = document.getElementById("play_stop");
 
+  // Condition where ipod is not playing yet
 	if (playing == false){
     button.innerHTML = "pause";
     playing = true;
     timing = setInterval(moveTime, 1000);
   }
+  // Condition where ipod is playing
   else{
     button.innerHTML = "play_arrow";
     playing = false;
@@ -60,6 +62,7 @@ document.getElementById('play_stop').onclick = function switchPlay() {
 document.getElementById("next").onclick = function nextSong() {
   // Goes to the next song
 
+  // Updating song name
   if (curSongIndex+1 >= tracklist.length){
     curSongIndex = 0;
     document.getElementById("songName").innerHTML = tracklist[curSongIndex];
@@ -69,7 +72,7 @@ document.getElementById("next").onclick = function nextSong() {
     document.getElementById("songName").innerHTML = tracklist[curSongIndex];
   }
 
-
+  // Conditions for paused or not paused
   if (playing == true){
       newSong();
   }
@@ -82,7 +85,8 @@ document.getElementById("next").onclick = function nextSong() {
 
 document.getElementById("prev").onclick = function prevSong() {
   // Goes to the previous song
-  
+
+  // Updating song name
   if (curSongIndex == 0){
     curSongIndex = tracklist.length - 1;
     document.getElementById("songName").innerHTML = tracklist[curSongIndex];
@@ -92,6 +96,7 @@ document.getElementById("prev").onclick = function prevSong() {
     document.getElementById("songName").innerHTML = tracklist[curSongIndex];
   }
 
+  // Conditions for paused or not paused
   if (playing == true){
       newSong();
   }

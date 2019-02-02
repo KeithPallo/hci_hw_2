@@ -199,18 +199,21 @@ to each other.
 	padding-bottom: 10px;
 }
 
+/* Moving range to show song progress */
 .playbar{
 	display: inline-grid;
 	width: 75%;
 	grid-template-columns: 50% 50%;
 }
 
+/* Left time label */
 .playbar .end_label:first-of-type {
 	padding-top: 3px;
   text-align: left;
 	font-size: 10pt;
 }
 
+/* Right time label */
 .playbar .end_label {
 	padding-top: 3px;
   text-align: right;
